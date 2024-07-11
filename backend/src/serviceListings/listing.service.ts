@@ -1,6 +1,7 @@
 import { Injectable, Inject, NotFoundException } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Listing } from './listing.entity';
+import { User } from '../users/user.entity'; // Adjust the path as necessary
 
 @Injectable()
 export class ListingService {
@@ -12,6 +13,7 @@ export class ListingService {
   async findAll(): Promise<Listing[]> {
     return await this.listingRepository.find();
   }
+
   async findOne(id: number): Promise<Listing> {
     const listing = await this.listingRepository.findOne({ where: { id } });
     if (!listing) {
@@ -20,8 +22,8 @@ export class ListingService {
     return listing;
   }
 
-  async create(listingData: Partial<Listing>): Promise<Listing> {
-    const listing = this.listingRepository.create(listingData);
+  async create(user: User, listingData: Partial<Listing>): Promise<Listing> {
+    const listing = this.listingRepository.create({ ...listingData, user });
     return await this.listingRepository.save(listing);
   }
 
@@ -37,5 +39,4 @@ export class ListingService {
       throw new NotFoundException(`Listing with ID ${id} not found`);
     }
   }
-
 }

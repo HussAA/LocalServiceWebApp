@@ -1,6 +1,8 @@
-import { Controller, Get, Post, Put, Delete, Body, Param } from '@nestjs/common';
+import { Controller, Get, Post, Put, Delete, Body, Param, Req, UseGuards } from '@nestjs/common';
 import { ListingService } from './listing.service';
 import { Listing } from './listing.entity';
+import { LocalAuthGuard } from '../auth/local-auth.guard'; // Adjust the path as necessary
+import { User } from '../users/user.entity'; // Adjust the path as necessary
 
 @Controller('listings')
 export class ListingController {
@@ -16,9 +18,11 @@ export class ListingController {
     return this.listingService.findOne(id);
   }
 
+  @UseGuards(LocalAuthGuard)
   @Post()
-  async create(@Body() listingData: Partial<Listing>): Promise<Listing> {
-    return this.listingService.create(listingData);
+  async create(@Req() req, @Body() listingData: Partial<Listing>): Promise<Listing> {
+    const user: User = req.user; 
+    return this.listingService.create(user, listingData);
   }
 
   @Put(':id')
