@@ -8,7 +8,9 @@ export class UserService {
     @Inject('USER_REPOSITORY')
     private usersRepository: Repository<User>,
   ) {}
-
+  async findById(id: number): Promise<User | undefined> {
+    return this.usersRepository.findOne({ where: { id } });
+  }
   async findByEmail(email: string): Promise<User | undefined> {
     return this.usersRepository.findOne({ where: { email } });
   }

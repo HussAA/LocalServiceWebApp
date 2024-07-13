@@ -1,22 +1,22 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { User } from '../users/user.entity';
 @Entity()
 export class Listing {
-    @PrimaryGeneratedColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    title: string;
+  @Column()
+  title: string;
 
-    @Column()
-    location: string;
+  @Column()
+  location: string;
 
-    @Column({ type: "decimal", precision:10, scale:2 })
-    price: number;
+  @Column({ type: 'decimal', precision: 10, scale: 2 })
+  price: number;
 
-    @Column()
-    status: boolean;
+  @Column()
+  status: boolean;
 
-    @ManyToOne(() => User, user => user.listings)
-    user: User;
+  @ManyToOne(() => User, (user) => user.listings)
+  user: User;
 }

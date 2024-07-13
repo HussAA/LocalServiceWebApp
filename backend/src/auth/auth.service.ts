@@ -1,20 +1,20 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Repository } from 'typeorm';
-import { User } from '../users/user.entity';
+import { UserService } from '../users/user.service';
 import * as bcrypt from 'bcrypt';
+import { User } from 'src/users/user.entity';
 
 @Injectable()
 export class AuthService {
   constructor(
-    @Inject('USER_REPOSITORY')
-    private userRepository: Repository<User>,
+    private userService: UserService,
     private jwtService: JwtService,
   ) {}
 
   async validateUser(email: string, password: string): Promise<any> {
-    const user = await this.userRepository.findOne({ where: { email } });
-    if (user && await bcrypt.compare(password, user.password)) {
+    const user = await this.userService.findByEmail(email);
+    if (user && (await bcrypt.compare(password, user.password))) {
       const { password, ...result } = user;
       return result;
     }
@@ -22,7 +22,8 @@ export class AuthService {
   }
 
   async login(user: User) {
-    const payload = { email: user.email, sub: user.id };
+    const userData = await this.userService.findByEmail(user.email);
+    const payload = { email: user.email, sub: userData.id };
     return {
       access_token: this.jwtService.sign(payload),
     };
@@ -31,6 +32,6 @@ export class AuthService {
   async signUp(user: User): Promise<any> {
     const hashedPassword = await bcrypt.hash(user.password, 10); // Hash password with bcrypt
     const newUser = { ...user, password: hashedPassword };
-    return this.userRepository.save(newUser);
+    return this.userService.create(newUser);
   }
 }
