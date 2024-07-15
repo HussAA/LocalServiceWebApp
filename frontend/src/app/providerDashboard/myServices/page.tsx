@@ -4,24 +4,29 @@ import React, { useState, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-
 interface Service {
   id: number;
   title: string;
-  location:string;
+  location: string;
   price: number;
   status: boolean;
 }
 
 export default function MyServices() {
-  const [services, setServices] = useState<Service[]>([]);  
+  const [services, setServices] = useState<Service[]>([]);
   const [isAddServiceOpen, setIsAddServiceOpen] = useState(false);
   const [isStatusModalOpen, setStatusModalOpen] = useState(false);
   useEffect(() => {
-    fetch('http://localhost:8000/listings/')
-      .then(response => response.json())
+    fetch("http://localhost:8000/listings/", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1c3NhaW4uc21pdGhAZXhhbXBsZS5jb20iLCJzdWIiOjIsImlhdCI6MTcyMDkwNzA5MiwiZXhwIjoxNzIwOTEwNjkyfQ.VWxFLR_X_NFZehX3D6owoIy8STWecix8xIBE5APfZOQ`,
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
       .then((data: Service[]) => setServices(data))
-      .catch(error => console.error('Error fetching data:', error));
+      .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
   function closeAddServiceModal() {
@@ -78,7 +83,9 @@ export default function MyServices() {
                   />
                 </div>
                 <div className="p-4">
-                  <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
+                  <h2 className="text-xl font-semibold mb-2">
+                    {service.title}
+                  </h2>
                   <div className="flex justify-between items-center mb-2">
                     <span>{service.location}</span>
                     <span>${service.price}</span>
@@ -89,7 +96,11 @@ export default function MyServices() {
                     </button>
                     <button
                       onClick={openStatusModal}
-                      className={`px-2 py-1 rounded ${service.status ? 'bg-green-200 text-green-700' : 'bg-red-200 text-red-700'}`}
+                      className={`px-2 py-1 rounded ${
+                        service.status
+                          ? "bg-green-200 text-green-700"
+                          : "bg-red-200 text-red-700"
+                      }`}
                     >
                       {service.status ? "Active" : "Inactive"}
                     </button>
