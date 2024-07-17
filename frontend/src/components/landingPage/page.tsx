@@ -3,7 +3,7 @@
 import Header from "./header";
 import HeroGradientBackground from './gardientHero'
 import Hero from "./hero";
-
+import Categories from './categories'
 
 function LandingPageIndex() {
   return (
@@ -12,6 +12,9 @@ function LandingPageIndex() {
         <Header />
         <Hero />
       </HeroGradientBackground>
+      <section>
+        <Categories/>
+      </section>
     </>
   );
 }
