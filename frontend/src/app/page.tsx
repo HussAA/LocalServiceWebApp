@@ -1,6 +1,7 @@
+import LandingPageIndex from '../components/landingPage/page'
 
 export default function Home() {
   return (
-    <h1>Hello world</h1>
+    <LandingPageIndex/>
   );
 }
