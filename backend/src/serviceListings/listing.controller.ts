@@ -10,7 +10,8 @@ import {
 } from '@nestjs/common';
 import { ListingService } from './listing.service';
 import { Listing } from './listing.entity';
-import { User } from '../users/user.entity'; // Adjust the path as necessary
+import { User } from '../users/user.entity';
+
 @Controller('listings')
 export class ListingController {
   constructor(private readonly listingService: ListingService) {}
@@ -46,7 +47,7 @@ export class ListingController {
   @Delete(':id')
   async remove(@Req() req, @Param('id') id: number): Promise<void> {
     const user: User = req.user;
-    console.log('this is delete', user, id);
     return this.listingService.remove(user, id);
   }
 }
+

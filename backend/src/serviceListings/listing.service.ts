@@ -35,7 +35,6 @@ export class ListingService {
       ...listingData,
       user: user,
     });
-    // console.log('this is what is logged:', listing);
     return await this.listingRepository.save(listing);
   }
 
@@ -59,7 +58,7 @@ export class ListingService {
 
   async remove(user: User, id: number): Promise<void> {
     const listing = await this.findOne(id);
-    console.log('this is remove', listing);
+    console.log('this is remove method', listing);
     if (listing.user.id !== user.id) {
       throw new ForbiddenException(
         'You are not allowed to delete this listing',
