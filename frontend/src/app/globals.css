@@ -1,9 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.gardient-banner{
-    background: linear-gradient(90deg, rgba(236, 161, 17, 0.41) 0%, rgba(151, 215, 177, 0.28) 88%);
-}
-
+  
