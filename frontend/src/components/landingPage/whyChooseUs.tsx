@@ -13,10 +13,10 @@ const WhyChooseUs = () => {
   return (
     <>
       <div className="py-32 bg-gradient-to-r from-[#201039] to-[#0F1627] ">
-        <div className="w-11/12 md:w-10/12 xl:w-8/12 2xl:w-9/12 flex flex-row gap-5 mx-auto ">
+        <div className="w-11/12 md:w-10/12 xl:w-8/12 2xl:w-9/12 flex lg:flex-row flex-col gap-6 mx-auto ">
           {/*Left Side*/}
-          <div className="md:w-5/12 order-1">
-            <div className="absolute bg-[#252525] w-[330px] shadow-lg shadow-black rounded-lg duration-200 flex flex-col">
+          <div className="lg:w-5/12 order-2 lg:order-1">
+            <div className="absolute bg-[#252525] w-[330px] shadow-md shadow-gray-900 rounded-lg duration-200 flex flex-col">
               <div className="">
                 <Image
                   src="/plumber.png"
@@ -48,19 +48,19 @@ const WhyChooseUs = () => {
             </div>
           </div>
           {/*Right Side*/}
-          <div className="md:w-7/12 order-2 flex flex-col justify-center">
+          <div className="lg:w-7/12 flex flex-col justify-center order-1 lg:order-2">
             <div className="text-4xl capitalize text-[#F4F4F4]">
               Why Choose Us?
             </div>
             <div className="py-7 text-[#D1CFCF]">{sectionDetails}</div>
             <div className="space-x-6 py-4">
               <Link
-                className="bg-[#101010] text-[#F0F0F0] p-2 px-8 rounded-lg"
+                className="bg-[#101010] text-[#F0F0F0] p-2 px-8 rounded-lg shadow-md shadow-gray-900 hover:shadow-gray-800 hover:shadow-lg duration-200"
                 href="#"
               >
                 Start Earning
               </Link>
-              <Link className=" text-[#618AE4]" href="#">
+              <Link className=" text-[#618AE4] hover:text-[#4b72c7] duration-200" href="#">
                 Browse Services
               </Link>
             </div>
