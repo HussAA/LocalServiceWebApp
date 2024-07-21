@@ -1,9 +1,10 @@
 import Header from "./header";
-import HeroGradientBackground from './gardientHero'
+import HeroGradientBackground from "./gardientHero";
 import Hero from "./hero";
-import Categories from './categories'
+import Categories from "./categories";
 import PopularServices from "./popularServices";
 import WhyChooseUs from "./whyChooseUs";
+import HowItWorks from "./howItWorks";
 
 function LandingPageIndex() {
   return (
@@ -13,13 +14,16 @@ function LandingPageIndex() {
         <Hero />
       </HeroGradientBackground>
       <section className="pt-20">
-        <Categories/>
+        <Categories />
       </section>
       <section className="py-20">
-        <PopularServices/>
+        <PopularServices />
       </section>
       <section className="py-56">
-      <WhyChooseUs/>
+        <WhyChooseUs />
+      </section>
+      <section className="py-56">
+        <HowItWorks />
       </section>
     </>
   );

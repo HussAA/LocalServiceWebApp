@@ -15,7 +15,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
+import { IconCircleArrowRight } from '@tabler/icons-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       
         {/* Middle links */}
-        <nav className="hidden lg:flex lg:justify-center lg:flex-1">
+        <nav className="hidden font-medium lg:flex lg:justify-center lg:flex-1">
           <Link
             className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
             href="/"
@@ -43,17 +43,18 @@ const Header = () => {
             How It Works
           </Link>
           <Link
-            className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
+            className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md flex"
             href="/"
           >
-            Become A worker
+            Become A Worker
+            <IconCircleArrowRight className="text-[#ce8a0c] w-8" stroke={1.5} />
           </Link>
         </nav>
 
         {/* Right side - Login/Signup */}
         <div className="hidden lg:flex items-center">
           <Link
-            className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
+            className="font-medium text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
             href="/signup"
           >
             Register

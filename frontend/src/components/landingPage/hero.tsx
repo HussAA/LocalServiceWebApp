@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { IconCircleArrowRight } from '@tabler/icons-react';
+
 const Hero = () => {
   return (
     <section className="pt-20">
@@ -28,7 +30,7 @@ const Hero = () => {
               className="w-full px-4 py-3 border border-gray-300 rounded-l-full focus:outline-none"
               placeholder="What service do you need?"
             />
-            <button className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-r-full hover:text-amber-200 hover:bg-[#1b1b1b] duration-200">
+            <button className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-r-full hover:bg-[#1b1b1b] duration-200">
               Search
             </button>
           </div>
@@ -53,14 +55,15 @@ const Hero = () => {
             </div>
           </div>
           {/* Button and Link */}
-          <div>
+          <div className="flex items-center">
             <Link
               href="#"
-              className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-full mr-4 hover:text-amber-200 hover:bg-[#1b1b1b] duration-200"
+              className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-full mr-4 hover:bg-[#1b1b1b] duration-200 flex hover:shadow-gray-800 hover:shadow-md shadow shadow-gray-900"
             >
               Start earning
+              <IconCircleArrowRight className="text-[#ce8a0c] w-8" stroke={1.5} />
             </Link>
-            <Link href="#" className="hover:text-amber-900 duration-200">
+            <Link href="#" className="hover:text-[#ce8a0c] duration-200">
               Learn More
             </Link>
           </div>

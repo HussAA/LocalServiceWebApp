@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IconCircleArrowRight } from '@tabler/icons-react';
 
 const sectionDetails = [
   "With smart recommendations, real-time booking, secure payments, and round-the-clock support, we ensure a hassle-free experience, making our experts your trusted partner for getting a service done efficiently.",
@@ -53,12 +54,13 @@ const WhyChooseUs = () => {
               Why Choose Us?
             </div>
             <div className="py-7 text-[#D1CFCF]">{sectionDetails}</div>
-            <div className="space-x-6 py-4">
+            <div className="space-x-6 py-4 flex items-center">
               <Link
-                className="bg-[#101010] text-[#F0F0F0] p-2 px-8 rounded-lg shadow-md shadow-gray-900 hover:shadow-gray-800 hover:shadow-lg duration-200"
+                className="bg-[#101010] text-[#F0F0F0] p-2 px-6 rounded-lg shadow-md shadow-gray-900 hover:shadow-gray-800 hover:shadow-lg duration-200 flex w-[22%] justify-center"
                 href="#"
               >
                 Start Earning
+                <IconCircleArrowRight className="text-[#ce8a0c] w-8 h-7 pl-2" stroke={1.5} />
               </Link>
               <Link className=" text-[#618AE4] hover:text-[#4b72c7] duration-200" href="#">
                 Browse Services
