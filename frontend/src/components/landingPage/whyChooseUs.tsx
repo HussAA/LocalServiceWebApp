@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
   return (
     <>
       <div className="py-32 bg-gradient-to-r from-[#201039] to-[#0F1627] ">
-        <div className="w-11/12 md:w-10/12 xl:w-8/12 2xl:w-9/12 flex lg:flex-row flex-col gap-6 mx-auto ">
+        <div className="w-11/12 md:w-10/12 2xl:w-8/12 flex lg:flex-row flex-col gap-6 mx-auto ">
           {/*Left Side*/}
           <div className="lg:w-5/12 order-2 lg:order-1">
             <div className="absolute bg-[#252525] w-[330px] shadow-md shadow-gray-900 rounded-lg duration-200 flex flex-col">
@@ -54,13 +54,13 @@ const WhyChooseUs = () => {
               Why Choose Us?
             </div>
             <div className="py-7 text-[#D1CFCF]">{sectionDetails}</div>
-            <div className="space-x-6 py-4 flex items-center">
+            <div className="py-4 flex items-center">
               <Link
-                className="bg-[#101010] text-[#F0F0F0] p-2 px-6 rounded-lg shadow-md shadow-gray-900 hover:shadow-gray-800 hover:shadow-lg duration-200 flex w-[22%] justify-center"
+                className="bg-[#101010] text-[#F0F0F0] text-nowrap mr-6 px-6 py-2 rounded-lg shadow shadow-gray-900 hover:shadow-gray-800 hover:shadow-md duration-200 flex max-w-[200px] justify-center items-center" 
                 href="#"
               >
                 Start Earning
-                <IconCircleArrowRight className="text-[#ce8a0c] w-8 h-7 pl-2" stroke={1.5} />
+                <IconCircleArrowRight className="text-[#ce8a0c]" stroke={1.5} />
               </Link>
               <Link className=" text-[#618AE4] hover:text-[#4b72c7] duration-200" href="#">
                 Browse Services

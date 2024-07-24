@@ -19,7 +19,7 @@ const cardItems = [
 const PopularServices = () => {
   return (
     <>
-      <div className="w-11/12 md:w-10/12 2xl:w-9/12 mx-auto">
+      <div className="w-11/12 md:w-10/12 2xl:w-8/12 mx-auto">
         {/* Header Section */}
         <div className="flex flex-row justify-between border-b-2 pb-1 border-gray-200">
           {/* Title Section */}

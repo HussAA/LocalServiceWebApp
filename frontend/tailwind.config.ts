@@ -40,6 +40,12 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(130deg, #060122 20%, #01212F 50%, #060122 80%)',
+      },
+      screens:{
+        'xs': '530px', //min-width
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

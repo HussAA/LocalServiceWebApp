@@ -22,7 +22,7 @@ const Header = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <header className="w-11/12 md:w-10/12 2xl:w-9/12 flex justify-between items-center py-8 mx-auto text-black">
+    <header className="w-11/12 md:w-10/12 2xl:w-8/12 flex justify-between items-center py-8 mx-auto text-black">
       {/* Logo on the left */}
       <div className="flex items-center">
         <span className="text-2xl">Logo</span>

@@ -6,9 +6,9 @@ import { IconCircleArrowRight } from '@tabler/icons-react';
 const Hero = () => {
   return (
     <section className="pt-20">
-      <div className="w-11/12 md:w-10/12 2xl:w-9/12 flex flex-col lg:flex-row items-center mx-auto">
+      <div className="w-11/12 md:w-10/12 2xl:w-8/12 flex gap-4 flex-col lg:flex-row items-center mx-auto">
         {/* Left Section */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-[55%]">
           {/* Banner */}
           <button className="cursor-default bg-gradient-to-r from-[#ec9f1162] to-[#97d7b144] text-black px-5 py-[2px] rounded-full mb-12 font-medium border border-gray-300">
             We can help you
@@ -16,7 +16,7 @@ const Hero = () => {
 
           {/* Title */}
           <h1 className="text-5xl mb-2">
-            All Your <span className="text-[#A752A4]">Service</span> Needs in
+            All Your <span className="text-[#A752A4]">Service <br/></span> Needs in
             One Place
           </h1>
           {/* Slogan */}
@@ -69,18 +69,18 @@ const Hero = () => {
           </div>
         </div>
         {/* Right Section */}
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
           {/*Hero Image*/}
           <Image
             src="/transparent-image.png"
             alt="Hero Image"
-            width={500}
-            height={500}
+            width={480}
+            height={480}
             className="rounded-md"
           />
         </div>
         {/*Stat Card*/}
-        <div className="hidden lg:flex lg:flex-wrap items-center py-8 px-6 rounded-lg bg-gradient-to-l from-[#ec9f1162] to-[#97d7b16b] backdrop-blur-sm md:absolute top-40 right-[350px]">
+        <div className="hidden lg:flex lg:flex-wrap items-center py-8 px-6 rounded-lg bg-gradient-to-l from-[#ec9f1162] to-[#97d7b16b] backdrop-blur-sm md:absolute top-[34%] right-[32%]">
           <div className="mr-2">
             <Image
               src="/happy.png"
