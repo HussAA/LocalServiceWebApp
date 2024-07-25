@@ -15,8 +15,8 @@ const newsletterData: NewsletterProps = {
 const Newsletter: React.FC = () => {
     const { title, heading, policy } = newsletterData;
   return (
-    <div className="w-11/12 max-w-[1000px] flex flex-col md:flex-row max-h-[320px] mb-20 absolute left-1/2 transform -translate-x-1/2 md:-top-52 -top-28 mx-auto">
-      <div className="rounded-[30px] bg-gradient-to-l from-[#ec9f1162] to-[#97d7b16b] flex flex-col md:flex-row md:items-stretch w-full">
+    <div className="w-11/12 max-w-[1000px] flex flex-col md:flex-row max-h-[320px] mb-20 absolute left-1/2 transform -translate-x-1/2 md:-top-52 -top-44 mx-auto">
+      <div className="rounded-[30px] bg-gradient-to-br from-[#dfcdad] to-[#c5ecd5] flex flex-col md:flex-row md:items-stretch w-full p-6 md:p-px">
         {/* Left side */}
         <div className="hidden md:block md:w-5/12 h-11/12">
           <Image
@@ -38,12 +38,12 @@ const Newsletter: React.FC = () => {
           <div className="relative mb-4 flex items-center">
             <input
               type="text"
-              className="w-full sm:w-11/12 lg:w-10/12 px-4 py-3 border bg-[#ac73002a] border-[#C6C2C2] rounded-full focus:outline-none focus:placeholder-opacity-30 placeholder-[#797272]"
+              className="w-full sm:w-11/12 lg:w-10/12 px-4 py-3 border bg-[#f1e0be] border-[#C6C2C2] rounded-full focus:outline-none focus:placeholder-opacity-30 placeholder-[#797272]"
               placeholder="Enter your email"
             />
-            <button className="absolute lg:right-[95px] md:right-[46px] sm:right-[60px] right-[10px] bg-[#2B3F6C] text-[#F0F0F0] px-5 py-2 rounded-full hover:bg-[#172444] duration-200">
+            <Link href="#" className="absolute lg:right-[95px] md:right-[46px] sm:right-[60px] right-[9px] bg-[#2B3F6C] text-[#F0F0F0] px-5 py-2 rounded-full hover:bg-[#172444] duration-200">
               Subscribe
-            </button>
+            </Link>
           </div>
           {/* Policy */}
           <div className="text-sm text-gray-800">

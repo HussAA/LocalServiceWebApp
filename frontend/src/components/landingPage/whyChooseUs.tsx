@@ -31,9 +31,9 @@ const WhyChooseUs = () => {
                 <div className="font-medium text-[#E3E3E3]">
                   Reliable Home Plumbing
                 </div>
-                <div className="text-sm text-[#A0A0A0] pt-7 pb-5">
+                <p className="text-sm text-[#A0A0A0] pt-7 pb-5">
                   {cardDetails}
-                </div>
+                </p>
                 <div className="flex justify-between items-center">
                   <div className=" text-[#E3E3E3]">
                     $40 <span className="text-sm text-[#A0A0A0]">/ hour</span>
@@ -53,14 +53,14 @@ const WhyChooseUs = () => {
             <div className="text-4xl capitalize text-[#F4F4F4]">
               Why Choose Us?
             </div>
-            <div className="py-7 text-[#D1CFCF]">{sectionDetails}</div>
+            <p className="py-7 text-[#D1CFCF]">{sectionDetails}</p>
             <div className="py-4 flex items-center">
               <Link
-                className="group bg-[#101010] text-[#F0F0F0] text-nowrap mr-6 px-6 py-2 rounded-lg shadow shadow-gray-900 hover:shadow-gray-800 hover:shadow-md duration-200 flex max-w-[200px] justify-center items-center" 
+                className="group space-x-1 bg-[#101010] text-[#F0F0F0] text-nowrap mr-6 py-2 px-6 rounded-lg shadow shadow-gray-900 hover:shadow-gray-800 hover:shadow-md duration-200 flex max-w-[200px] justify-center items-center" 
                 href="#"
               >
                 Start Earning
-                <IconCircleArrowRight className="text-[#ce8a0c] transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
+                <IconCircleArrowRight className="text-[#ce8a0c] ml-1 transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
               </Link>
               <Link className=" text-[#618AE4] hover:text-[#4b72c7] duration-200" href="#">
                 Browse Services

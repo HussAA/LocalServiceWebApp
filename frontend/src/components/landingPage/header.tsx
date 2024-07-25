@@ -15,7 +15,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { IconCircleArrowRight } from '@tabler/icons-react';
+// import { IconCircleArrowRight } from '@tabler/icons-react';
+import { NavMenu } from "./navMenu";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,9 +28,13 @@ const Header = () => {
       <div className="flex items-center">
         <span className="text-2xl">Logo</span>
       </div>
-      
-        {/* Middle links */}
-        <nav className="hidden font-medium lg:flex lg:justify-center lg:flex-1">
+
+      {/* Middle links */}
+      <span className="hidden lg:flex">
+        <NavMenu />
+      </span>
+
+      {/* <nav className="hidden font-medium lg:flex lg:justify-center lg:flex-1">
           <Link
             className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
             href="/"
@@ -49,12 +54,13 @@ const Header = () => {
             Become A Worker
             <IconCircleArrowRight className="text-[#ce8a0c] w-8 transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
           </Link>
-        </nav>
+        </nav> */}
 
-        {/* Right side - Login/Signup */}
-        <div className="hidden lg:flex items-center">
+      {/* Right side - Login/Signup */}
+      <div className="flex items-center">
+        <div className="hidden xs:flex items-center">
           <Link
-            className="font-medium text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md"
+            className="font-medium text-[#2F2E2E] hover:text-cyan-900 duration-200 px-3 py-2 rounded-md"
             href="/signup"
           >
             Register
@@ -66,40 +72,47 @@ const Header = () => {
             Login
           </Link>
         </div>
-      {/* Hamburger Menu */}
-      <div className="lg:hidden">
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Hamburger color="#0c0c0c" distance="sm" size={25} toggled={isOpen} toggle={toggle} />
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you're done.
-              </SheetDescription>
-            </SheetHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
-                  Name
-                </Label>
-                <Input id="name" value="Pedro Duarte" className="col-span-3" />
+        {/* Hamburger Menu */}
+        <div className="lg:hidden ml-2">
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Hamburger
+                color="#0c0c0c"
+                distance="sm"
+                size={25}
+                toggled={isOpen}
+                toggle={toggle}
+              />
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Edit profile</SheetTitle>
+                <SheetDescription>
+                  Make changes to your profile here. Click save when you're done.
+                </SheetDescription>
+              </SheetHeader>
+              <div className="grid gap-4 py-4">
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="name" className="text-right">
+                    Name
+                  </Label>
+                  <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                </div>
+                <div className="grid grid-cols-4 items-center gap-4">
+                  <Label htmlFor="username" className="text-right">
+                    Username
+                  </Label>
+                  <Input id="username" value="@peduarte" className="col-span-3" />
+                </div>
               </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="username" className="text-right">
-                  Username
-                </Label>
-                <Input id="username" value="@peduarte" className="col-span-3" />
-              </div>
-            </div>
-            <SheetFooter>
-              <SheetClose asChild>
-                <Button type="submit">Save changes</Button>
-              </SheetClose>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
+              <SheetFooter>
+                <SheetClose asChild>
+                  <Button type="submit">Save changes</Button>
+                </SheetClose>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

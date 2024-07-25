@@ -10,15 +10,15 @@ const Hero = () => {
         {/* Left Section */}
         <div className="w-full lg:w-[55%]">
           {/* Banner */}
-          <button className="cursor-default bg-gradient-to-r from-[#ec9f1162] to-[#97d7b144] text-black px-5 py-[2px] rounded-full mb-12 font-medium border border-gray-300">
+          <div className="w-44 cursor-default bg-gradient-to-r from-[#ec9f1162] to-[#97d7b144] text-black px-5 py-[2px] rounded-full mb-12 font-medium border border-gray-300">
             We can help you
-          </button>
+          </div>
 
           {/* Title */}
-          <h1 className="text-5xl mb-2">
+          <div className="text-5xl mb-2">
             All Your <span className="text-[#A752A4]">Service <br/></span> Needs in
             One Place
-          </h1>
+          </div>
           {/* Slogan */}
           <div className="text-[#5E5E5E] mb-4">
             Expert Care, Anytime, Anywhere

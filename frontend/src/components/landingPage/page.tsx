@@ -9,6 +9,7 @@ import Testimonial from "./testimonial";
 import Image from "next/image";
 import Newsletter from "./newsletter";
 import Footer from "./footer";
+import ScrollArrow from "../ui/scrollButton";
 
 function LandingPageIndex() {
   return (
@@ -23,13 +24,13 @@ function LandingPageIndex() {
       <section className="py-20">
         <PopularServices />
       </section>
-      <section className="lg:py-40 pb-[400px]">
+      <section id="whyChooseUs" className="lg:py-40 pb-[400px]">
         <WhyChooseUs />
       </section>
-      <section>
+      <section id="howItWorks" className="pb-20">
         <HowItWorks />
       </section>
-      <section className="relative py-20 bg-custom-gradient">
+      <section id="testimonial" className="relative py-20 bg-custom-gradient">
         <Image
           className="absolute"
           src="/squares.svg"
@@ -39,10 +40,12 @@ function LandingPageIndex() {
         />
         <Testimonial />
       </section>
-      <section className="pt-20 relative mt-72">
+      <section id="newsletter" className="pt-20 relative mt-72">
         <Newsletter />
         <Footer />
+        <ScrollArrow/>
       </section>
+
     </>
   );
 }
