@@ -7,6 +7,8 @@ import WhyChooseUs from "./whyChooseUs";
 import HowItWorks from "./howItWorks";
 import Testimonial from "./testimonial";
 import Image from "next/image";
+import Newsletter from "./newsletter";
+import Footer from "./footer";
 
 function LandingPageIndex() {
   return (
@@ -28,8 +30,18 @@ function LandingPageIndex() {
         <HowItWorks />
       </section>
       <section className="relative py-20 bg-custom-gradient">
-        <Image className="absolute" src="/squares.svg" objectFit="cover" layout="fill" alt="bg image" />
+        <Image
+          className="absolute"
+          src="/squares.svg"
+          objectFit="cover"
+          layout="fill"
+          alt="bg image"
+        />
         <Testimonial />
+      </section>
+      <section className="pt-20 relative mt-72">
+        <Newsletter />
+        <Footer />
       </section>
     </>
   );

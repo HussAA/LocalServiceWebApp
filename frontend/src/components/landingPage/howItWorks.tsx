@@ -67,7 +67,7 @@ const HowItWorks = () => {
           Get started in 3 easy steps
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 justify-center">
+        <div className="flex flex-col lg:flex-row gap-6 justify-center">
           {cards.map((card, index) => (
             <div
               key={index}

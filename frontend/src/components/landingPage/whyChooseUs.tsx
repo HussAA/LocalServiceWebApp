@@ -56,11 +56,11 @@ const WhyChooseUs = () => {
             <div className="py-7 text-[#D1CFCF]">{sectionDetails}</div>
             <div className="py-4 flex items-center">
               <Link
-                className="bg-[#101010] text-[#F0F0F0] text-nowrap mr-6 px-6 py-2 rounded-lg shadow shadow-gray-900 hover:shadow-gray-800 hover:shadow-md duration-200 flex max-w-[200px] justify-center items-center" 
+                className="group bg-[#101010] text-[#F0F0F0] text-nowrap mr-6 px-6 py-2 rounded-lg shadow shadow-gray-900 hover:shadow-gray-800 hover:shadow-md duration-200 flex max-w-[200px] justify-center items-center" 
                 href="#"
               >
                 Start Earning
-                <IconCircleArrowRight className="text-[#ce8a0c]" stroke={1.5} />
+                <IconCircleArrowRight className="text-[#ce8a0c] transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
               </Link>
               <Link className=" text-[#618AE4] hover:text-[#4b72c7] duration-200" href="#">
                 Browse Services

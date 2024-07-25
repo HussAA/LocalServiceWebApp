@@ -43,11 +43,11 @@ const Header = () => {
             How It Works
           </Link>
           <Link
-            className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md flex"
+            className="text-[#2F2E2E] hover:text-gray-600 px-3 py-2 rounded-md flex group"
             href="/"
           >
             Become A Worker
-            <IconCircleArrowRight className="text-[#ce8a0c] w-8" stroke={1.5} />
+            <IconCircleArrowRight className="text-[#ce8a0c] w-8 transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
           </Link>
         </nav>
 

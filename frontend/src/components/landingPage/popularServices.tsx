@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const cardItems = [
   { icon: "/plumber.png", title: "Cleaning" },
@@ -28,7 +29,14 @@ const PopularServices = () => {
             <div className="absolute top-[30px] left-0 w-1/4 border-b-4 border-orange-400" />
           </div>
           {/* Explore Link */}
-          <Link href="#">See All</Link>
+          <div className="">
+            <Link href="#" className="flex items-center group">
+              See All
+              <span className="font-mono text-lg ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                <FaArrowRightLong />
+              </span>
+            </Link>
+          </div>
         </div>
         {/* Card */}
         <Marquee

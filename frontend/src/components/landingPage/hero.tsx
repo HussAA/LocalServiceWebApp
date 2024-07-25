@@ -58,10 +58,10 @@ const Hero = () => {
           <div className="flex items-center">
             <Link
               href="#"
-              className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-full mr-4 hover:bg-[#1b1b1b] duration-200 flex hover:shadow-gray-800 hover:shadow-md shadow shadow-gray-900"
+              className="items-center bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-full mr-4 hover:bg-[#1b1b1b] duration-200 flex hover:shadow-gray-800 hover:shadow-md shadow shadow-gray-900 group"
             >
               Start earning
-              <IconCircleArrowRight className="text-[#ce8a0c] w-8" stroke={1.5} />
+              <IconCircleArrowRight className="text-[#ce8a0c] w-8 transition-transform group-hover:translate-x-1 duration-200" stroke={1.5} />
             </Link>
             <Link href="#" className="hover:text-[#ce8a0c] duration-200">
               Learn More
@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
           {/*Hero Image*/}
           <Image
-            src="/transparent-image.png"
+            src="/hero-main-image.png"
             alt="Hero Image"
             width={480}
             height={480}
