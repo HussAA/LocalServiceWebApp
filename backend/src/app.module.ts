@@ -8,9 +8,13 @@ import { AuthModule } from './auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { UserModule } from './users/user.module';
+import { CustomerAuthModule } from './customer-auth/customer-auth.module';
+import { CustomerModule } from './customerUsers/customer.module';
 
 @Module({
   imports: [
+    CustomerAuthModule,
+    CustomerModule,
     UserModule,
     ListingModule,
     BookingModule,

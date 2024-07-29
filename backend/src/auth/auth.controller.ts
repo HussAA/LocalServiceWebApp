@@ -1,8 +1,7 @@
 // src/auth/auth.controller.ts
 
-import { Body, Controller, Post, Request, UseGuards } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { LocalAuthGuard } from './local-auth.guard';
 import { User } from '../users/user.entity';
 import { Public } from './public.decorator';
 
