@@ -11,6 +11,7 @@ export class AuthController {
   @Public()
   @Post('signup')
   async signUp(@Body() user: User): Promise<any> {
+    console.log(user);
     return this.authService.signUp(user);
   }
 

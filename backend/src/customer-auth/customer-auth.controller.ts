@@ -11,6 +11,7 @@ export class CustomerAuthController {
   @Public()
   @Post('signup')
   async signUp(@Body() customerUser: CustomerUser): Promise<any> {
+    console.log(customerUser);
     return this.customerAuthService.signUp(customerUser);
   }
 

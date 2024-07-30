@@ -10,6 +10,7 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { UserModule } from './users/user.module';
 import { CustomerAuthModule } from './customer-auth/customer-auth.module';
 import { CustomerModule } from './customerUsers/customer.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { CustomerModule } from './customerUsers/customer.module';
     ListingModule,
     BookingModule,
     AuthModule,
+    ConfigModule.forRoot({isGlobal:true})
     // ChatModule,
   ],
   controllers: [AppController],
