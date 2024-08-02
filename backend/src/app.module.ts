@@ -11,6 +11,8 @@ import { UserModule } from './users/user.module';
 import { CustomerAuthModule } from './customer-auth/customer-auth.module';
 import { CustomerModule } from './customerUsers/customer.module';
 import { ConfigModule } from '@nestjs/config';
+import { AwsController } from './aws-s3/aws-s3.controller';
+import { AwsService } from './aws-s3/aws-s3.service';
 
 @Module({
   imports: [
@@ -23,9 +25,10 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({isGlobal:true})
     // ChatModule,
   ],
-  controllers: [AppController],
+  controllers: [AppController, AwsController],
   providers: [
     AppService,
+    AwsService,
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
