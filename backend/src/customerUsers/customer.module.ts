@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from '../database/database.module'; // Adjust the path as necessary
-import { CustomerProvider } from './customer.provider';
+import { CustomerProvider } from './customer.providers';
 import { CustomerService } from './customer.service';
 
 @Module({

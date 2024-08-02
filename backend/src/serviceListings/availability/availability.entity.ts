@@ -1,10 +1,24 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 import { Listing } from '../listing.entity';
 
+
+export enum Weekday {
+  SUNDAY = 'SUNDAY',
+  MONDAY = 'MONDAY',
+  TUESDAY = 'TUESDAY',
+  WEDNESDAY = 'WEDNESDAY',
+  THURSDAY = 'THURSDAY',
+  FRIDAY = 'FRIDAY',
+  SATURDAY = 'SATURDAY',
+}
+
 @Entity()
 export class AvailabilityEntity {
   @PrimaryGeneratedColumn()
   id: number;
+
+  @Column({ type: 'enum', enum: Weekday, array: true })
+  weekday: Weekday[];
 
   @Column()
   startTime: string;

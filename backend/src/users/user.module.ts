@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from '../database/database.module'; // Adjust the path as necessary
-import { userProviders } from './user.provider';
+import { userProviders } from './user.providers';
 import { UserService } from './user.service';
 
 @Module({
