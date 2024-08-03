@@ -30,7 +30,6 @@ export class AwsService {
       ACL:"authenticated-read",
       ContentType: mimetype,
       ContentDisposition: 'inline',
-      // No ACL or use 'private'
     };
 
     try {

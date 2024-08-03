@@ -13,9 +13,11 @@ import { CustomerModule } from './customerUsers/customer.module';
 import { ConfigModule } from '@nestjs/config';
 import { AwsController } from './aws-s3/aws-s3.controller';
 import { AwsService } from './aws-s3/aws-s3.service';
+import { CustomerBookingsModule } from './customerBooking/customerBookings.module';
 
 @Module({
   imports: [
+    CustomerBookingsModule,
     CustomerAuthModule,
     CustomerModule,
     UserModule,
