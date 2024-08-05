@@ -31,10 +31,10 @@ import { CustomerBookingsModule } from './customerBooking/customerBookings.modul
   providers: [
     AppService,
     AwsService,
-    {
-      provide: APP_GUARD,
-      useClass: JwtAuthGuard,
-    },
+    // {
+    //   provide: APP_GUARD,
+    //   useClass: JwtAuthGuard,
+    // },
   ],
 })
 export class AppModule {}

@@ -1,7 +1,8 @@
-import { Controller, Get, Post, Param, Req, Body} from '@nestjs/common';
+import { Controller, Get, Post, Param, Req, Body, UseGuards} from '@nestjs/common';
 import { CustomerBookingService } from './customerBookings.service';
 import { CustomerUser } from '../customerUsers/customer.entity';
 import { CustomerBookingsEntity } from './customerBookings.entity';
+import { CustomerJwtAuthGuard } from 'src/customer-auth/customer-auth.jwt-auth.guard';
 
 @Controller('customer-booking')
 export class CustomerBookingsController {
@@ -11,13 +12,13 @@ export class CustomerBookingsController {
   async findOne(@Param('id') id: number): Promise<CustomerBookingsEntity> {
     return this.customerBookingService.findOne(id);
   }
-
+  @UseGuards(CustomerJwtAuthGuard)
   @Post()
   async create(
     @Req() req,
     @Body() customerBookingData: Partial<CustomerBookingsEntity>,
   ): Promise<CustomerBookingsEntity> {
-    const customerUser: CustomerUser = req.user;
-    return this.customerBookingService.create(customerUser, customerBookingData);
+    const user: CustomerUser = req.user;
+    return this.customerBookingService.create(user, customerBookingData);
   }
 }

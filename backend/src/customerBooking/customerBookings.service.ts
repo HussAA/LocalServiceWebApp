@@ -30,15 +30,16 @@ export class CustomerBookingService {
   }
 
   async create(
-    customerUser: CustomerUser,
+    user: CustomerUser,
     customerBookingData: Partial<CustomerBookingsEntity>,
   ): Promise<CustomerBookingsEntity> {
-    const { availabilityEntity, listing, paymentOption } = customerBookingData;
+    const { availabilityEntity, listing, paymentOption, bookingStatus } = customerBookingData;
 
     if (!availabilityEntity?.id || !listing?.id) {
       throw new NotFoundException('Availability ID or Listing ID is missing.');
     }
 
+    // Fetch the availability entity from the database
     const availability = await this.availabilityRepository.findOne({
       where: { id: availabilityEntity.id },
     });
@@ -46,6 +47,7 @@ export class CustomerBookingService {
       throw new NotFoundException(`Availability with id ${availabilityEntity.id} not found`);
     }
 
+    // Fetch the listing entity from the database
     const listingEntity = await this.listingRepository.findOne({
       where: { id: listing.id },
     });
@@ -53,12 +55,22 @@ export class CustomerBookingService {
       throw new NotFoundException(`Listing with id ${listing.id} not found`);
     }
 
+    // Ensure bookingStatus is provided
+    if (!bookingStatus) {
+      throw new NotFoundException('Booking status is missing.');
+    }
+
+    // Create the booking entity
     const booking = this.customerBookingsRepository.create({
+      ...customerBookingData,
       availabilityEntity: availability,
       listing: listingEntity,
       paymentOption,
+      bookingStatus, // Ensure bookingStatus is included
+      customerUser: user,
     });
 
+    // Save the booking entity to the database
     return this.customerBookingsRepository.save(booking);
   }
 }

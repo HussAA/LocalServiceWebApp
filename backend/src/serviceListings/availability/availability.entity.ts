@@ -3,6 +3,7 @@ import { Listing } from '../listing.entity';
 
 
 export enum Weekday {
+  ALL_DAYS = 'ALL_DAYS',
   SUNDAY = 'SUNDAY',
   MONDAY = 'MONDAY',
   TUESDAY = 'TUESDAY',

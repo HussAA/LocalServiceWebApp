@@ -15,6 +15,12 @@ export enum PaymentOption {
   WALLET = 'WALLET',
 }
 
+export enum BookingStatus {
+  IN_PROGRESS = 'IN_PROGRESS',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+}
+
 @Entity()
 export class CustomerBookingsEntity {
   @PrimaryGeneratedColumn()
@@ -27,10 +33,16 @@ export class CustomerBookingsEntity {
   @Column({ type: 'enum', enum: PaymentOption })
   paymentOption: PaymentOption;
 
+  @Column({ type: 'enum', enum: BookingStatus })
+  bookingStatus: BookingStatus;
+
   @OneToOne(() => Listing)
   @JoinColumn()
   listing: Listing;
 
-  @ManyToOne(() => CustomerUser, (customerUser) => customerUser.customerBookings)
+  @ManyToOne(
+    () => CustomerUser,
+    (customerUser) => customerUser.customerBookings,
+  )
   customerUser: CustomerUser;
 }
