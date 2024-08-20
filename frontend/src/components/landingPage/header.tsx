@@ -66,7 +66,7 @@ const Header = () => {
             Register
           </Link>
           <Link
-            className="bg-[#252525] hover:bg-[#1b1b1b] hover:text-amber-200 text-[#F0F0F0] px-7 py-1 rounded-2xl duration-200"
+            className="bg-[#252525] hover:bg-[#1b1b1b] hover:shadow-gray-800 hover:shadow-md shadow shadow-gray-500 text-[#F0F0F0] px-7 py-1 rounded-2xl duration-200"
             href="/login"
           >
             Login
@@ -86,30 +86,44 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Edit profile</SheetTitle>
-                <SheetDescription>
-                  Make changes to your profile here. Click save when you're done.
-                </SheetDescription>
+                <SheetTitle>Logo</SheetTitle>
+                <hr/>
+                <Link className="pb-2 pt-5" href='#'>All Services</Link>
+                <Link className="pb-2" href='#'>Help & Support</Link>
+                <Link className="pb-2" href='#'>How it Works</Link>
+                <Link className="pb-2" href='#'>All Services</Link>
+                <Link className="pb-6" href='#'>All Services</Link>
+                <hr className="pb-10"/>
+                <SheetDescription>Login to your profile</SheetDescription>
               </SheetHeader>
               <div className="grid gap-4 py-4">
                 <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="name" className="text-right">
-                    Name
+                  <Label htmlFor="email" className="text-right">
+                    Email
                   </Label>
-                  <Input id="name" value="Pedro Duarte" className="col-span-3" />
+                  <Input
+                    id="email"
+                    value="HussainAlnakhli@example.com"
+                    className="col-span-3"
+                  />
                 </div>
                 <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="username" className="text-right">
-                    Username
+                  <Label htmlFor="password" className="text-right">
+                    Password
                   </Label>
-                  <Input id="username" value="@peduarte" className="col-span-3" />
+                  <Input
+                    id="password"
+                    value="***********"
+                    className="col-span-3"
+                  />
                 </div>
               </div>
               <SheetFooter>
                 <SheetClose asChild>
-                  <Button type="submit">Save changes</Button>
+                  <Button type="submit">Sign In</Button>
                 </SheetClose>
               </SheetFooter>
+              <div></div>
             </SheetContent>
           </Sheet>
         </div>

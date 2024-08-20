@@ -55,7 +55,7 @@ const Testimonial: React.FC = () => {
       <div className="text-center mb-6 border-[#ffffff31] border rounded-full md:text-lg max-w-[200px] p-2 px-4 mx-auto text-white uppercase">Testimonials</div>
       <div className="text-center mb-10 lg:mb-20 text-white md:text-3xl text-2xl w-9/12 mx-auto">{sectionDescription}</div>
       <CarouselContent className="-ml-1">
-        {Array.from({ length: 5 }).map((_, i) => (
+        {Array.from({ length: 7 }).map((_, i) => (
           cardReviews.map((item: Review, index: number) => (
             <CarouselItem key={index} className="pl-1 md:basis-1/2">
               <div className="p-1">

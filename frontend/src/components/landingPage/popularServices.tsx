@@ -45,6 +45,7 @@ const PopularServices = () => {
           gradient
           gradientColor="white"
           gradientWidth={10}
+          direction="right"
         >
           <div className="flex gap-5 ml-5 py-10">
             {cardItems.map((item, index) => (
