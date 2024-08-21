@@ -1,4 +1,13 @@
 "use client";
+
+import {
+  FaQuestionCircle,
+  FaListAlt,
+  FaInfoCircle,
+  FaRegQuestionCircle,
+  FaFileContract,
+} from "react-icons/fa";
+
 import { useState } from "react";
 import Hamburger from "hamburger-react";
 import Link from "next/link";
@@ -17,6 +26,36 @@ import {
 } from "@/components/ui/sheet";
 // import { IconCircleArrowRight } from '@tabler/icons-react';
 import { NavMenu } from "./navMenu";
+import Image from "next/image";
+
+const linkItems = [
+  {
+    href: "#",
+    label: "Help & Support",
+    icon: <FaQuestionCircle className="text-blue-500" />,
+  },
+  {
+    href: "#",
+    label: "All Services",
+    icon: <FaListAlt className="text-blue-500" />,
+  },
+  {
+    href: "#",
+    label: "How it Works",
+    icon: <FaInfoCircle className="text-blue-500" />,
+  },
+  {
+    href: "#",
+    label: "FAQ",
+    icon: <FaQuestionCircle className="text-blue-500" />,
+  },
+  {
+    href: "#",
+    label: "Terms & Conditions",
+    icon: <FaFileContract className="text-blue-500" />,
+  },
+];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -87,16 +126,61 @@ const Header = () => {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>Logo</SheetTitle>
-                <hr/>
-                <Link className="pb-2 pt-5" href='#'>All Services</Link>
-                <Link className="pb-2" href='#'>Help & Support</Link>
-                <Link className="pb-2" href='#'>How it Works</Link>
-                <Link className="pb-2" href='#'>All Services</Link>
-                <Link className="pb-6" href='#'>All Services</Link>
-                <hr className="pb-10"/>
+
+                <div className="flex flex-col">
+                  {linkItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      className="pb-1 mb-4 border-b flex items-center"
+                      href={item.href}
+                    >
+                      {item.icon}
+                      <span className="ml-2">{item.label}</span>
+                    </Link>
+                  ))}
+                </div>
+                <span className="pb-10" />
                 <SheetDescription>Login to your profile</SheetDescription>
               </SheetHeader>
-              <div className="grid gap-4 py-4">
+              <div className="pt-4 flex gap-4">
+                <button className="flex-1 hover:shadow-lg duration-150 hover:shadow-gray-400">
+                  <Link
+                    href="/provider-login"
+                    className="flex flex-col items-center border shadow p-4 rounded-md"
+                  >
+                    <div className="flex flex-col items-center mb-2">
+                      <span className="font-bold mb-2">Providers</span>
+                      <Image
+                        src="/worker.png"
+                        alt="Provider Logo"
+                        className="w-16 h-16 mb-2"
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                    <span className="mt-auto">Login</span>
+                  </Link>
+                </button>
+                <button className="flex-1 hover:shadow-lg duration-150 hover:shadow-gray-400">
+                  <Link
+                    href="/customer-login"
+                    className="flex flex-col items-center border shadow p-4 rounded-md"
+                  >
+                    <div className="flex flex-col items-center mb-2">
+                      <span className="font-bold mb-2">Customers</span>
+                      <Image
+                        src="/customer.png"
+                        alt="Customer Logo"
+                        className="w-16 h-16 mb-2"
+                        width={50}
+                        height={50}
+                      />
+                    </div>
+                    <span className="mt-auto">Login</span>
+                  </Link>
+                </button>
+              </div>
+              {/* <div className="grid gap-4 py-4">
                 <div className="grid grid-cols-4 items-center gap-4">
                   <Label htmlFor="email" className="text-right">
                     Email
@@ -122,7 +206,7 @@ const Header = () => {
                 <SheetClose asChild>
                   <Button type="submit">Sign In</Button>
                 </SheetClose>
-              </SheetFooter>
+              </SheetFooter> */}
               <div></div>
             </SheetContent>
           </Sheet>

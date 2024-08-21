@@ -2,8 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IconCircleArrowRight } from '@tabler/icons-react';
+import React from "react";
+import { FlipWords } from "../ui/flip-words";
 
 const Hero = () => {
+  const words = ["Service", "Task", "Assistance"];
   return (
     <section className="pt-20">
       <div className="w-11/12 md:w-10/12 2xl:w-8/12 flex gap-4 flex-col lg:flex-row items-center mx-auto">
@@ -16,7 +19,7 @@ const Hero = () => {
 
           {/* Title */}
           <div className="text-5xl mb-2">
-            All Your <span className="text-[#A752A4]">Service <br/></span> Needs in
+            All Your<span className="text-[#A752A4]"><FlipWords words={words} /> <br/></span> Needs in
             One Place
           </div>
           {/* Slogan */}
