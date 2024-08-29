@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="mb-4 flex">
             <input
               type="text"
-              className="w-full px-4 py-3 border border-gray-300 rounded-l-full focus:outline-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-l-full focus:placeholder-gray-300 focus:outline-none"
               placeholder="What service do you need?"
             />
             <button className="bg-[#252525] text-[#F0F0F0] px-6 py-2 rounded-r-full hover:bg-[#1b1b1b] duration-200">

@@ -5,7 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+body {
+  overflow-x: hidden;
+}
 .scrollTop {
   position: fixed;
   width: auto;

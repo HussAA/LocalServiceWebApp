@@ -24,7 +24,7 @@ function LandingPageIndex() {
       <section className="py-20">
         <PopularServices />
       </section>
-      <section id="whyChooseUs" className="lg:py-40 pb-[400px]">
+      <section id="whyChooseUs" className="lg:py-20 lg:pb-40 pb-[400px]">
         <WhyChooseUs />
       </section>
       <section id="howItWorks" className="pb-20">
