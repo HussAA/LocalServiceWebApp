@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 
 import type { Metadata } from 'next'
 import './globals.css'
+import '@radix-ui/themes/styles.css';
 
 
 const inter = Inter({ subsets: ["latin"] });
