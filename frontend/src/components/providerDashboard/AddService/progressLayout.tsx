@@ -34,8 +34,8 @@ const ProgressLayout: React.FC<ProgressLayoutProps> = ({ completedSteps }) => {
                         <div className="text-black text-[40px] font-medium capitalize mb-4">create service</div>
                     </div>
                     <div className="flex justify-center items-center">
-                        <Link href="/" className="capitalize text-sm relative underline">
-                            home <span className="absolute w-2 h-2 top-[7px] left-[53px] rounded-full bg-blue-800" />
+                        <Link href="/" className="capitalize text-sm relative">
+                            home <span className="absolute w-2 h-2 top-[7px] left-[53px] rounded-full bg-[#365BAB]" />
                         </Link>
                         <div className="text-[#666666] capitalize pl-9">create service</div>
                     </div>
@@ -47,7 +47,7 @@ const ProgressLayout: React.FC<ProgressLayoutProps> = ({ completedSteps }) => {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="flex items-center p-4 bg-white border rounded-lg shadow py-7 lg:py-10 max-w-60">
+                            className="flex items-center p-4 bg-white border rounded-lg shadow py-7 lg:py-10">
                             <div className="flex-1">
                                 <span className="text-lg font-medium">{step.title}</span>
                             </div>

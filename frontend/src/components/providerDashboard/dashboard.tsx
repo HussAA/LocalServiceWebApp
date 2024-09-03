@@ -14,16 +14,16 @@ type SidebarLink = {
 };
 
 const sidebarLinks: SidebarLink[] = [
-  { href: '/providerDashboard', label: 'Dashboard', icon: <FiHome /> },
-  { href: '/providerDashboard/myServices', label: 'My Services', icon: <HiOutlineSquares2X2 /> },
-  { href: '/providerDashboard/bookings', label: 'Bookings', icon: <LuCalendarDays /> },
-  { href: '/providerDashboard/payout', label: 'Payout', icon: <FiDollarSign /> },
-  { href: '/providerDashboard/availability', label: 'Availability', icon: <FiClock /> },
-  { href: '/providerDashboard/reviews', label: 'Reviews', icon: <FiStar /> },
-  { href: '/providerDashboard/earnings', label: 'Earnings', icon: <FiDollarSign /> },
-  { href: '/providerDashboard/chat', label: 'Chat', icon: <IoChatbubbleEllipsesOutline /> },
-  { href: '/providerDashboard/settings', label: 'Settings', icon: <FiSettings /> },
-  { href: '/providerDashboard/logout', label: 'Logout', icon: <FiLogOut /> },
+  { href: '/provider-dashboard', label: 'Dashboard', icon: <FiHome /> },
+  { href: '/provider-dashboard/my-services', label: 'My Services', icon: <HiOutlineSquares2X2 /> },
+  { href: '/provider-dashboard/bookings', label: 'Bookings', icon: <LuCalendarDays /> },
+  { href: '/provider-dashboard/payout', label: 'Payout', icon: <FiDollarSign /> },
+  { href: '/provider-dashboard/availability', label: 'Availability', icon: <FiClock /> },
+  { href: '/provider-dashboard/reviews', label: 'Reviews', icon: <FiStar /> },
+  { href: '/provider-dashboard/earnings', label: 'Earnings', icon: <FiDollarSign /> },
+  { href: '/provider-dashboard/chat', label: 'Chat', icon: <IoChatbubbleEllipsesOutline /> },
+  { href: '/provider-dashboard/settings', label: 'Settings', icon: <FiSettings /> },
+  { href: '/provider-dashboard/logout', label: 'Logout', icon: <FiLogOut /> },
 ];
 export default function DashboardPage() {
   return (

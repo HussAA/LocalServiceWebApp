@@ -1,6 +1,6 @@
 // components/DashboardLayout.tsx
 'use client';
-import { Theme, Button, Flex, Box, Avatar, Text } from '@radix-ui/themes';
+import { Theme, Flex, Box, Avatar, Text } from '@radix-ui/themes';
 import * as Popover from '@radix-ui/react-popover';
 
 import React, { ReactNode, useState } from 'react';

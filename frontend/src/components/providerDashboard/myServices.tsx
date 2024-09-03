@@ -28,16 +28,16 @@ type SidebarLink = {
 };
 
 const sidebarLinks: SidebarLink[] = [
-  { href: '/providerDashboard', label: 'Dashboard', icon: <FiHome /> },
-  { href: '/providerDashboard/myServices', label: 'My Services', icon: <HiOutlineSquares2X2 /> },
-  { href: '/providerDashboard/bookings', label: 'Bookings', icon: <LuCalendarDays /> },
-  { href: '/providerDashboard/payout', label: 'Payout', icon: <FiDollarSign /> },
-  { href: '/providerDashboard/availability', label: 'Availability', icon: <FiClock /> },
-  { href: '/providerDashboard/reviews', label: 'Reviews', icon: <FiStar /> },
-  { href: '/providerDashboard/earnings', label: 'Earnings', icon: <FiDollarSign /> },
-  { href: '/providerDashboard/chat', label: 'Chat', icon: <IoChatbubbleEllipsesOutline /> },
-  { href: '/providerDashboard/settings', label: 'Settings', icon: <FiSettings /> },
-  { href: '/providerDashboard/logout', label: 'Logout', icon: <FiLogOut /> },
+  { href: '/provider-dashboard', label: 'Dashboard', icon: <FiHome /> },
+  { href: '/provider-dashboard/my-services', label: 'My Services', icon: <HiOutlineSquares2X2 /> },
+  { href: '/provider-dashboard/bookings', label: 'Bookings', icon: <LuCalendarDays /> },
+  { href: '/provider-dashboard/payout', label: 'Payout', icon: <FiDollarSign /> },
+  { href: '/provider-dashboard/availability', label: 'Availability', icon: <FiClock /> },
+  { href: '/provider-dashboard/reviews', label: 'Reviews', icon: <FiStar /> },
+  { href: '/provider-dashboard/earnings', label: 'Earnings', icon: <FiDollarSign /> },
+  { href: '/provider-dashboard/chat', label: 'Chat', icon: <IoChatbubbleEllipsesOutline /> },
+  { href: '/provider-dashboard/settings', label: 'Settings', icon: <FiSettings /> },
+  { href: '/provider-dashboard/logout', label: 'Logout', icon: <FiLogOut /> },
 ];
 export default function MyServices() {
   const [services, setServices] = useState<Service[]>([]);
@@ -47,7 +47,7 @@ export default function MyServices() {
     fetch("http://localhost:8000/listings/", {
       method: "GET",
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1c3NhaW4uc21pdGhAZXhhbXBsZS5jb20iLCJzdWIiOjIsImlhdCI6MTcyNTIzNjI2NCwiZXhwIjoxNzI1MjM5ODY0fQ.TvaJSOnh1IBEkRkpilughyztrl5mpuwYK_uDchMedJU`,
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1c3NhaW4uc21pdGhAZXhhbXBsZS5jb20iLCJzdWIiOjIsImlhdCI6MTcyNTM4MDc3OSwiZXhwIjoxNzI1Mzg0Mzc5fQ.p9BVEKkTAb4iR-pnjypGsRIDIrn5pyKd0pPlP8NMmTg`,
         "Content-Type": "application/json",
       },
     })
@@ -108,7 +108,7 @@ export default function MyServices() {
               </div>
               <div>
                 <Link
-                  href="/Provider-Dashboard/Create-Service/info"
+                  href="/provider-dashboard/create-service/info"
                   className="bg-[#2B3F6C] text-white p-2 py-[10px] rounded"
                 >
                   + Add Service
