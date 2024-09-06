@@ -13,17 +13,17 @@ const CreateServiceGallery: React.FC = () => {
         <div className='flex justify-center gap-4'>
           <Link
             href="/provider-dashboard/create-service/location"
-            className='inline-flex items-center bg-gray-300 text-black p-2 px-5 rounded-md text-sm'
+            className='inline-flex items-center bg-gray-300 text-black p-2 px-5 rounded-md text-sm group'
           >
-            <FaArrowLeftLong className='mr-2' />
+            <FaArrowLeftLong className='mr-2 transition-transform group-hover:-translate-x-1' />
             Back
           </Link>
           <Link
             href="/provider-dashboard/create-service/seo"
-            className='inline-flex items-center bg-[#365BAB] text-white p-2 px-5 rounded-md text-sm'
+            className='inline-flex items-center bg-[#365BAB] text-white p-2 px-5 rounded-md text-sm group'
           >
             Next
-            <FaArrowRightLong className='ml-2' />
+            <FaArrowRightLong className='ml-2 transition-transform group-hover:translate-x-1' />
           </Link>
         </div>
       </div>
