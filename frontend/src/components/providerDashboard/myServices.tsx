@@ -47,7 +47,7 @@ export default function MyServices() {
     fetch("http://localhost:8000/listings/", {
       method: "GET",
       headers: {
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh1c3NhaW4uc21pdGhAZXhhbXBsZS5jb20iLCJzdWIiOjIsImlhdCI6MTcyNTU4NTQ1NywiZXhwIjoxNzI1NTg5MDU3fQ.Azo7laFbPhRqQOG5Gw-V6F8Cp0k7kwWW2dslyeryXa4`,
+        Authorization: `Bearer ${process.env.AUTH_BEARER}`,
         "Content-Type": "application/json",
       },
     })
