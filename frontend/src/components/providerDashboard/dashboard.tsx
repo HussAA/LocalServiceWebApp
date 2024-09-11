@@ -28,7 +28,7 @@ const sidebarLinks: SidebarLink[] = [
 export default function DashboardPage() {
   return (
     <DashboardLayout sidebarLinks={sidebarLinks} title="Logo">
-      <h1 className="text-2xl font-bold">Provider Dashboard</h1>
+      <h1 className="text-3xl font-medium">Provider Dashboard</h1>
       <p className="mt-4">Welcome to your dashboard!</p>
     </DashboardLayout>
   );

@@ -43,11 +43,12 @@ export default function MyServices() {
   const [services, setServices] = useState<Service[]>([]);
   const [isAddServiceOpen, setIsAddServiceOpen] = useState(false);
   const [isStatusModalOpen, setStatusModalOpen] = useState(false);
+
   useEffect(() => {
     fetch("http://localhost:8000/listings/", {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${process.env.AUTH_BEARER}`,
+        Authorization: `${process.env.NEXT_PUBLIC_AUTH_BEARE}`,
         "Content-Type": "application/json",
       },
     })
@@ -109,7 +110,7 @@ export default function MyServices() {
               <div>
                 <Link
                   href="/provider-dashboard/create-service/info"
-                  className="bg-[#2B3F6C] text-white p-2 py-[10px] rounded"
+                  className="bg-[#2B3F6C] text-white px-4 py-[10px] rounded"
                 >
                   + Add Service
                 </Link>
@@ -151,7 +152,7 @@ export default function MyServices() {
                       className="relative flex items-center ml-6"
                     >
                       <span
-                        className={`absolute -left-3 w-4 h-4 rounded-full ${service.status ? "bg-green-700" : "bg-red-700"
+                        className={`absolute -left-2 w-3 h-3 rounded-full ${service.status ? "bg-green-700" : "bg-red-700"
                           }`}
                       />
                       <span className="ml-3">

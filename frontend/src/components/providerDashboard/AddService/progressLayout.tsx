@@ -31,11 +31,11 @@ const ProgressLayout: React.FC<ProgressLayoutProps> = ({ completedSteps }) => {
                 {/* Header */}
                 <div className="relative z-10 ">
                     <div>
-                        <div className="text-black text-[40px] font-medium capitalize mb-4">create service</div>
+                        <div className="text-black text-4xl font-medium capitalize mb-4">create service</div>
                     </div>
-                    <div className="flex justify-center items-center">
-                        <Link href="/" className="capitalize text-sm relative">
-                            home <span className="absolute w-2 h-2 top-[7px] left-[53px] rounded-full bg-[#365BAB]" />
+                    <div className="flex justify-center">
+                        <Link href="/provider-dashboard" className="capitalize relative">
+                            dashboard <span className="absolute w-2 h-2 top-[9px] left-[97px] rounded-full bg-[#365BAB]" />
                         </Link>
                         <div className="text-[#666666] capitalize pl-9">create service</div>
                     </div>
@@ -53,7 +53,7 @@ const ProgressLayout: React.FC<ProgressLayoutProps> = ({ completedSteps }) => {
                             </div>
                             <div>
                                 <FaCheckCircle
-                                    className={`text-xl ${completedSteps[index] ? 'text-blue-500' : 'text-gray-300'
+                                    className={`text-xl ${completedSteps[index] ? 'text-[#365BAB]' : 'text-gray-300'
                                         }`}
                                 />
                             </div>

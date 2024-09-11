@@ -27,7 +27,7 @@ const CreateServiceInfo: React.FC = () => {
 
       {/* Form */}
       <div className="mx-auto p-4 lg:w-11/12 xl:w-9/12">
-        <div className="bg-white p-5 rounded-lg shadow-md pb-20">
+        <div className="bg-white p-7 rounded-lg shadow-md pb-20">
           <div className="text-2xl font-medium mb-1">Service Information</div>
           <hr className="mb-7" />
 

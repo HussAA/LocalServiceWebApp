@@ -121,8 +121,8 @@ const CreateServiceAvailability: React.FC = () => {
 
       {/* Set Your Availability */}
       <div className="mx-auto p-4 lg:w-11/12 xl:w-9/12">
-        <div className='bg-white p-5 rounded-lg shadow-md pb-20'>
-          <h2 className="text-2xl font-medium mb-1">Availability</h2>
+        <div className='bg-white p-7 rounded-lg shadow-md pb-20'>
+          <h2 className="text-2xl font-medium mb-1">Service Availability</h2>
           <hr className="mb-7" />
           <div className="space-y-4">
             {Object.keys(availability).map((day) => (
